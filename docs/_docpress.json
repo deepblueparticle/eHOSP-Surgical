@@ -2,63 +2,118 @@
   "toc": {
     "sections": [
       {
-        "title": "Overview",
-        "source": "md-docs/overview.md",
+        "title": "About",
+        "source": "md-docs/about.md",
         "url": "index.html",
         "slug": "index"
       },
       {
-        "title": "Installation",
-        "source": "md-docs/install.md",
-        "url": "install.html",
-        "slug": "install",
-        "headings": [
-          {
-            "title": "Installation",
-            "depth": 2,
-            "id": "installation"
-          }
-        ]
+        "title": "Overview",
+        "source": "md-docs/overview.md",
+        "url": "overview.html",
+        "slug": "overview"
       },
       {
         "title": "Contribute",
         "source": "md-docs/contribute.md",
         "url": "contribute.html",
         "slug": "contribute"
+      },
+      {
+        "title": "ROS - Robot Operating System",
+        "sections": [
+          {
+            "title": "Install",
+            "source": "md-docs/ros/install.md",
+            "url": "ros/install.html",
+            "slug": "rosinstall",
+            "headings": [
+              {
+                "title": "Install ROS development environment",
+                "depth": 2,
+                "id": "install-ros-development-environment"
+              }
+            ]
+          },
+          {
+            "title": "Getting Started",
+            "source": "md-docs/ros/start.md",
+            "url": "ros/start.html",
+            "slug": "rosstart",
+            "headings": [
+              {
+                "title": "Requirements",
+                "depth": 2,
+                "id": "requirements"
+              },
+              {
+                "title": "Run ROS commands on Teensy",
+                "depth": 2,
+                "id": "run-ros-commands-on-teensy"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "index": {
     "index.html": {
-      "source": "md-docs/overview.md",
-      "title": "Overview",
-      "pageTitle": "Overview",
+      "source": "md-docs/about.md",
+      "title": "About",
+      "pageTitle": "About",
       "slug": "index"
     },
-    "install.html": {
-      "source": "md-docs/install.md",
-      "title": "Installation - Overview",
-      "pageTitle": "Installation",
-      "slug": "install",
-      "headings": [
-        {
-          "title": "Installation",
-          "depth": 2,
-          "id": "installation"
-        }
-      ]
+    "overview.html": {
+      "source": "md-docs/overview.md",
+      "title": "Overview - About",
+      "pageTitle": "Overview",
+      "slug": "overview"
     },
     "contribute.html": {
       "source": "md-docs/contribute.md",
-      "title": "Contribute - Overview",
+      "title": "Contribute - About",
       "pageTitle": "Contribute",
       "slug": "contribute"
+    },
+    "ros/install.html": {
+      "source": "md-docs/ros/install.md",
+      "title": "Install - About",
+      "pageTitle": "Install",
+      "slug": "rosinstall",
+      "headings": [
+        {
+          "title": "Install ROS development environment",
+          "depth": 2,
+          "id": "install-ros-development-environment"
+        }
+      ]
+    },
+    "ros/start.html": {
+      "source": "md-docs/ros/start.md",
+      "title": "Getting Started - About",
+      "pageTitle": "Getting Started",
+      "slug": "rosstart",
+      "headings": [
+        {
+          "title": "Requirements",
+          "depth": 2,
+          "id": "requirements"
+        },
+        {
+          "title": "Run ROS commands on Teensy",
+          "depth": 2,
+          "id": "run-ros-commands-on-teensy"
+        }
+      ]
     }
   },
   "sources": {
-    "md-docs/overview.md": "index.html",
-    "md-docs/install.md": "install.html",
+    "md-docs/about.md": "index.html",
+    "md-docs/overview.md": "overview.html",
     "md-docs/contribute.md": "contribute.html",
+    "md-docs/ros/install.md": "ros/install.html",
+    "md-docs/ros/start.md": "ros/start.html",
     "md-docs/style.css": "style.css"
   }
 }

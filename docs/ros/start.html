@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../style.css?t=6daf1d3b">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>Getting Started - About</title>
+    <meta name="viewport" content="width=device-width">
+    <script>if (true || window.location.hostname.indexOf("") === window.location.hostname.length - 0) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">About</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-overview" href="../overview.html">Overview</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title  link-contribute" href="../contribute.html">Contribute</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">ROS - Robot Operating System</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-rosinstall" href="../ros/install.html">Install</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-rosstart" href="../ros/start.html">Getting Started</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-requirements" href="#requirements">Requirements</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-run-ros-commands-on-teensy" href="#run-ros-commands-on-teensy">Run ROS commands on Teensy</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-rosstart">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/ehosp/eHOSP-Surgical" data-title="ehosp/eHOSP-Surgical">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h2 id="requirements">Requirements</h2>
+<p>Arduino IDE with installed the following plugins:</p>
+<ul>
+<li><a href="http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup">rosserial_arduino</a></li>
+<li>Teensy plugin <a href="https://www.pjrc.com/teensy/td_download.html">Teensyduino</a></li>
+</ul>
+<h2 id="run-ros-commands-on-teensy">Run ROS commands on Teensy</h2>
+<ol>
+<li>Enter the ROS environment <code>source /opt/ros/&lt;distro&gt;/setup.bash</code></li>
+<li>Start ROS master <code>roscore</code></li>
+<li>Upload .ino file to arduino (Make sure you have installed rosserial_arduino) and run it.</li>
+<li>In a new terminal run <code>rosrun rosserial_python serial_node.py /dev/ttyACM0</code> . Make sure to specify the correct port (same port you used in the Arduino IDE to upload the code)</li>
+<li>In a new terminal interact with your Arduino program through ROS topics.<br>
+e.g.
+<code>rostopic pub motor2/start std_msgs/Empty --once</code> will execute once the following method</li>
+</ol>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="pl-k">void</span> <span class="pl-ent">startMotor2</span><span class="hljs-params">(<span class="pl-k">const</span> std_msgs::Empty&amp; toggle_msg)</span>
+</span></code></pre>
+<p>whereas <code>rostopic pub motor1/start std_msgs/Int8 15 --once</code> will execute once the following method</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="pl-k">void</span> <span class="pl-ent">startMotor1</span><span class="hljs-params">(<span class="pl-k">const</span> std_msgs::Int8&amp; rpm)</span>
+</span></code></pre>
+<p>by passing as an argument an rpm of 15</p>
+<ol start="6">
+<li>You can see all available topics by running in a terminal <code>rostopic list</code></li>
+</ol>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../ros/install.html"><span class="title">Install</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
