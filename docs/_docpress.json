@@ -11,7 +11,14 @@
         "title": "Overview",
         "source": "md-docs/overview.md",
         "url": "overview.html",
-        "slug": "overview"
+        "slug": "overview",
+        "headings": [
+          {
+            "title": "Overview",
+            "depth": 2,
+            "id": "overview"
+          }
+        ]
       },
       {
         "title": "Contribute",
@@ -68,7 +75,14 @@
       "source": "md-docs/overview.md",
       "title": "Overview - About",
       "pageTitle": "Overview",
-      "slug": "overview"
+      "slug": "overview",
+      "headings": [
+        {
+          "title": "Overview",
+          "depth": 2,
+          "id": "overview"
+        }
+      ]
     },
     "contribute.html": {
       "source": "md-docs/contribute.md",
@@ -114,6 +128,7 @@
     "md-docs/contribute.md": "contribute.html",
     "md-docs/ros/install.md": "ros/install.html",
     "md-docs/ros/start.md": "ros/start.html",
+    "md-docs/robot-render.jpg": "robot-render.jpg",
     "md-docs/style.css": "style.css"
   }
 }
